@@ -1,0 +1,16 @@
+@startuml
+class MainMenu extends JPanel{
+- startButton : JButton  
+- exitButton : JButton  
+- titleLabel : JLabel 
+- backgroundImage : Image 
+- buttonWidth : int 
+- buttonHeight : int  
+  
++ MainMenu(startAction  ActionListener, exitAction  ActionListener) 
+- loadBackgroundImage() : void 
+- initUI(startAction  ActionListener, exitAction  ActionListener) : void 
+- createImageButton(imagePath  String, action  ActionListener, width  int, height  int) : JButton 
++ paintComponent(g Graphics) : void 
+}
+@enduml

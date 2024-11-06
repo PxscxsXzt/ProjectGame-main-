@@ -1,0 +1,12 @@
+@startuml
+class Blood{
+- x : int 
+- y : int 
+- image : BufferedImage 
+
++ Blood(x  int, y  int) 
+- loadImage() : void 
++ draw(g2d Graphics2D) : void 
++ getBounds() : Rectangle
+}
+@enduml

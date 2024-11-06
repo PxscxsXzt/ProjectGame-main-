@@ -1,0 +1,25 @@
+@startuml
+class Destroyter{
+- x : double 
+- y : double 
+- dx : double 
+- dy : double 
+- image : BufferedImage 
+- health : int 
++ MAX_SPEED : int = 3
++ Destroyter(startX : int, startY : int) 
+
+- loadImage() : void 
+- initializeMovement() : void 
++ update() : void 
++ takeDamage(damage : int) : void 
++ isDestroyed() : boolean 
+- drawHealthBar(g2d : Graphics2D) : void 
++ draw(g2d: Graphics2D) : void 
++ getBounds() : Rectangle 
++ getX() : int 
++ getY() : int 
++ getWidth() : int 
++ getHeight() : int
+}
+@enduml

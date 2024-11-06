@@ -1,0 +1,24 @@
+@startuml
+class Key{
+- KEY_w : boolean 
+- KEY_s : boolean 
+- KEY_a : boolean 
+- KEY_d : boolean 
+- KEY_rotateLeft : boolean 
+- KEY_rotateRight : boolean
+
++ isKEY_w() : boolean 
++ setKEY_w(KEY_w  boolean) : void  
++ isKEY_s() : boolean 
++ setKEY_s(KEY_s  boolean) : void 
++ isKEY_a() : boolean 
++ setKEY_a(KEY_a  boolean) : void 
++ isKEY_d() : boolean 
++ setKEY_d(KEY_d  boolean) : void 
++ isKEY_rotateLeft() : boolean 
++ setKEY_rotateLeft(KEY_rotateLeft  boolean) : void 
++ isKEY_rotateRight() : boolean
++ setKEY_rotateRight(KEY_rotateRight  boolean) : void
++ toString() : String 
+}
+@enduml

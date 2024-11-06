@@ -1,0 +1,19 @@
+@startuml
+class Projectile{
+- x : double 
+- y : double 
+- angle : float 
+- speed : float = 10f 
+- size : int = 8 
+
++ Projectile(x : double, y : double, angle : float) 
++ update() : void 
++ draw(g2d : Graphics2D) : void 
++ getX() : double 
++ getY() : double 
++ getSize() : int 
++ collidesWith(objX : int, objY : int, objWidth : int, objHeight:  int) : boolean
++ collidesWith(objectBounds : Rectangle) : boolean 
++ getBounds() : Rectangle 
+}
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+class PanelGame extends JComponent implements Runnable {
+- image : BufferedImage 
+- backgroundImage : BufferedImage 
+- backgroundImageLevel2 : BufferedImage 
+- backgroundImageLevel3 : BufferedImage 
+- thread : Thread 
+- running : boolean 
+- gameOver : boolean 
+- win : boolean 
+- key : Key 
+- FPS : int = 50 
+- TARGET_TIME : long 
+- player : Player 
+- destroyters : ArrayList<Destroyter>
+- rocks : ArrayList<Rock> 
+- boms : ArrayList<Bom> 
+- bloods : ArrayList<Blood> 
+- level : int = 1 
+- totalScore : int 
+- exitButton : JButton 
+- restartButton : JButton
+
++ PanelGame() 
+- loadBackground() : void 
+- initObjectGame() : void 
+- isTooClose(x1  int, y1  int, x2  int, y2  int): boolean 
+- initKeyboard() : void 
++ start() : void 
+- restartGame() : void 
++ run() : void 
+- levelUp() : void 
+- updateGame() : void 
+- handleCollisions() : void 
+- triggerGameOver() : void 
+- drawBackground(g2d  Graphics2D) : void 
++ paintComponent(g  Graphics) : void 
+- drawWinScreen(g2d  Graphics2D) : void 
+- drawGameOverScreen(g2d  Graphics2D) : void 
+- drawGame(g2d  Graphics2D) : void 
+- drawScore(g2d  Graphics2D) : void 
+- drawLevel(g2d  Graphics2D) : void
+}
+@enduml

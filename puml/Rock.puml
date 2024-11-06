@@ -1,0 +1,22 @@
+@startuml
+class Rock{
+- x : double 
+- y : double 
+- dx : double 
+- dy : double 
+- image : BufferedImage 
+- health : int
+
++ Rock(startX : int, startY : int) 
+- loadImage() : void 
++ update() : void 
++ takeDamage() : void 
++ isDestroyed() : boolean 
+- drawHealthBar(g2d : Graphics2D) : void + draw(g2d : Graphics2D) : void 
++ getBounds() : Rectangle 
++ getX() : int 
++ getY() : int 
++ getWidth() : int 
++ getHeight() : int
+}
+@enduml

@@ -1,0 +1,23 @@
+@startuml  game
+!include PanelGame.puml
+!include Blood.puml
+!include Bom.puml
+!include Destroyter.puml
+!include Rock.puml
+!include MainMenu.puml
+!include Projectile.puml
+!include Key.puml
+!include Player.puml
+
+top to bottom direction
+class Main extends JFrame {
+    -PanelGame : panelGame 
+    -MainMenu : mainMenu
+
+    + Main() 
+    - init() : void 
+    - switchToGame() : void
+    + main(args: String[]) : void
+}
+
+@enduml

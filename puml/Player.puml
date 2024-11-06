@@ -1,0 +1,44 @@
+@startuml
+class player() {
+- WIDTH : int 
+- HEIGHT : int 
+- MAX_HEALTH : int 
+- x : double 
+- y : double 
+- angle : float 
+- score : int 
+- health : int 
+- image : BufferedImage 
+- projectiles : ArrayList<Projectile>
+- lastDamageTime : long 
+- DAMAGE_COOLDOWN : long 
+- isFlashing : boolean 
+- flashStartTime : long  
+- FLASH_DURATION : long
+
++ Player() 
+- loadImage() : void 
+- getScaledImage(img  Image, width  int, height  int) : BufferedImage 
++ changeLocation(x  double, y  double) : void 
++ changeAngle(angle  float) : void 
++ fire() : void 
++ updateProjectiles(destroyters  ArrayList<Destroyter>,  rocks  ArrayList<Rock>) : void 
++ update() : void 
++ draw(g2: Graphics2D) : void 
+- drawHealthBar(g2d  Graphics2D) : void 
++ takeDamage(damage  int) : void 
++ setHealth(health  int) : void 
++ isDead() : boolean 
++ getHealth() : int 
++ getMaxHealth() : int 
++ getScore() : int 
++ setScore(score int) : void 
++ getBounds() : Rectangle 
++ rotateLeft() : void 
++ rotateRight() : void 
++ setDY(dy int) : void 
++ setDX(dx int) : void 
++ getX() : int 
++ getY() : int
+}
+@enduml
